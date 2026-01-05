@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="M.css">
+</head>
+
+<body>
+
+  <dialog class="addModal">
+    <h3>Добавить переподователя</h3>
+    <form class="addForm">
+      <label for="avatar">Аватар</label>
+      <input type="text" name="avatar" id="avatar" required>
+      <label for="fullname">ФИО</label>
+      <input type="text" name="fullname" id="fullname" required>
+      <label for="age">Возраст</label>
+      <input type="number" name="age" id="age" required>
+      <label for="phone">Телефон</label>
+      <input type="text" name="phone" id="phone" required>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+      <label for="status">Статус</label>
+      <select name="status" id="">
+        <option value="true">Активен</option>
+        <option value="false">Не активен</option>
+      </select>
+      <div class="buttonsoform">
+        <button type="submit">Добавить</button>
+        <button type="reset" class="cancel">Назад</button>
+      </div>
+    </form>
+  </dialog>
+
+
+  <dialog class="editModal">
+    <h3>Редактировать переподователя</h3>
+    <form class="editForm">
+      <input type="hidden" name="id" class="id">
+      <label for="avatar">Аватар</label>
+      <input type="text" name="avatar" class="avatar" required>
+      <label for="fullname">ФИО</label>
+      <input type="text" name="fullname" class="fullname" required>
+      <input type="number" name="age" class="age" required>
+      <label for="phone">Телефон</label>
+      <input type="text" name="phone" class="phone" required>
+      <label for="email">Email</label>
+      <input type="email" name="email" class="email" required>
+      <label for="status">Статус</label>
+      <select name="status" class="status">
+        <option value="true">Активен</option>
+        <option value="false">Не активен</option>
+      </select>
+      <div class="buttonsoform">
+        <button type="submitedit">Сохранить</button>
+        <button type="button" class="canceledit">Назад</button>
+      </div>
+    </form>
+  </dialog>
+
+
+  <div class="container">
+    <h2>Все Преподаватели</h2><br>
+    <input type="text" class="search" placeholder="Поиск преподавателей по имени" /><br>
+
+    <div class="controls">
+      <button class="column-settings">⚙️ Настройка колонок</button>
+      <button class="add">+ Добавить</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ФИО</th>
+          <th>Контакт</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="M.js"></script>
+</body>
+
+</html>
